@@ -10,6 +10,31 @@
 \begin{multicols*}{3}
 \maketitle
 \section{Week 1}
+\subsection{Base-n Number Systems}
+\subsubsection{Integer Decimal to Base-$n$ Conversion}
+Repeated division by $n$, remainder forms the $n$-digit of the number in base-$n$.
+\subsubsection{Fractional Decimal to Base-n Conversion}
+Repeated multiplication by $n$, ones-place forms the $n$-digit of the number in base-$n$.
+\subsection{Number Representation Schemes}
+\subsubsection{Sign and Magnitude}
+MSB is sign bit, $0$ denotes positive, $1$ denotes negative. Remaining bits form the magnitude.
+\subsubsection{One's Complement}
+MSB is sign bit, $0$ denotes positive, $1$ denotes negative.
+Negative numbers by inversion of all bits.
+Arithmetic done by adding carry-out of MSB back into sum.
+\subsubsection{Two's Complement}
+MSB is sign bit, $0$ denotes positive, $1$ denotes negative.
+Negative numbers by inversion of all bits, followed by addition of $1$.
+Arithmetic done by ignoring carry out of MSB.
+\subsubsection{Excess-$n$ Representation}
+Number $N$ represents value $N-n$. For example, $000$ in excess-$4$ representation represents $0-4=-4$.
+
+\subsection{Real Number Representations}
+\subsubsection{IEEE-754 Float}
+MSB is sign bit, $0$ denotes positive, $1$ denotes negative.
+Next $8$ bits are exponent bits, represented in excess-127.
+Next $23$ bits are magnitude bits, normalised with implicit leading bit of 1.
+$x = (-1)^{S}*M*2^{(E-127)}$
 \section{Week 2}
 \end{multicols*}
 \end{document}
