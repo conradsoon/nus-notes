@@ -22,10 +22,12 @@ MSB is sign bit, $0$ denotes positive, $1$ denotes negative. Remaining bits form
 MSB is sign bit, $0$ denotes positive, $1$ denotes negative.
 Negative numbers by inversion of all bits.
 Arithmetic done by adding carry-out of MSB back into sum.
+Overflow can be detected by.
 \subsubsection{Two's Complement}
 MSB is sign bit, $0$ denotes positive, $1$ denotes negative.
 Negative numbers by inversion of all bits, followed by addition of $1$.
 Arithmetic done by ignoring carry out of MSB.
+Overflow can be detected by.
 \subsubsection{Excess-$n$ Representation}
 Number $N$ represents value $N-n$. For example, $000$ in excess-$4$ representation represents $0-4=-4$.
 
@@ -36,5 +38,47 @@ Next $8$ bits are exponent bits, represented in excess-127.
 Next $23$ bits are magnitude bits, normalised with implicit leading bit of 1.
 $x = (-1)^{S}*M*2^{(E-127)}$
 \section{Week 2}
+\subsection{Pointer Arithmetic}
+++(p) increases the value of p by sizeof(*p).
+\subsection{Functional Prototypes}
+If functional prototype not declared before main, C++ assumes default return type to be int, can cause problems later when defining function.
+\newline
+int sumArray(int[], int);
+\newline
+int sumArray(int arr[], int size);
+\newline
+Both are acceptable ways to declare function prototype: C++ does not care about name.
+\newline
+\subsection{Arrays}
+T a[] = T *a;
+Array bracket is just syntactic sugar for a pointer pointing to first element in array.
+
+\section{Week 3}
+\subsection{Functional Prototypes}
+If functional prototype not declared before main, C++ assumes default return type to be int, can cause problems later when defining function.
+\newline
+int sumArray(int[], int);
+\newline
+int sumArray(int arr[], int size);
+\newline
+Both are acceptable ways to declare function prototype: C++ does not care about name.
+\newline
+\subsection{Arrays}
+T a[] = T *a;
+Array bracket is just syntactic sugar for a pointer pointing to first element in array.
+\section{Week 4}
+\subsection{MIPS Instruction Types}
+MIPS instructions are divided into 3 types:
+\subsubsection{R-Format}
+opcode, rs, rt, rd, shamt, funct
+\paragraph{Arithmetic Instructions}
+Opcode always 0.
+shamt always 0.
+\paragraph{Shift Instructions}
+Opcode always 0.
+rs always 0.
+\subsubsection{I-Format}
+opcode, rs, rt, immediate
+immediate treated as signed, except bitwise.
 \end{multicols*}
 \end{document}

@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[a4paper,margin=0.5in,landscape]{geometry}
+\usepackage[]{amsmath}
+\usepackage{multicol}
+\usepackage{savetrees}
+\usepackage{mathtools}
+
+% https://tex.stackexchange.com/questions/43008/absolute-value-symbols
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+\title{MA2002 Midterm Cheatsheets}
+\author{Conrad Soon}
+% \date{\today}
+\begin{document}
+\begin{multicols*}{3}
+\maketitle
+\section{Definition of Limits}
+    Let $f$ be defined on an \textbf{open} interval about $c$, \textbf{possibly excluding $c$}. The limit of $f$ as x approaches $c$ is $L$, denoted as 
+	\begin{align*}
+		\lim_{x\to c}{f(x)} = L
+	\end{align*}
+	if $\forall \epsilon > 0$, $\exists \delta > 0$ such that
+	\begin{align*}
+		0 < \abs{x-c} < \delta \implies \abs{f(x)-L}<\epsilon
+	\end{align*}
+\section{Limit Rules}
+	If \textbf{both limits exist}, then any well-defined algebraic operation can be performed on the limits (limits can be added, multiplied, taken to rational power, etc).
+\section{Limit Inequality Theorem}
+	Suppose $f(x) \geq g(x)$ $\forall x$ in open interval containing $c$, except possibly at $x=c$ itself.
+	\begin{align*}
+		\textbf{If, }&\lim_{x\to c}{f(x)} = L \text{ and } \lim_{x\to c}{g(x)} = M\\
+		\textbf{Then, }&L \geq M
+	\end{align*}
+\section{Squeeze Theorem}
+	Suppose $g(x) \leq f(x) \leq h(x)$ $\forall x$ in open interval containing $c$, except possibly at $x=c$ itself.
+	\begin{align*}
+		\textbf{If, }&\lim_{x\to c}{g(x)} = \lim_{x\to c}{h(x)} = L\\
+		\textbf{Then, }&\lim_{x\to c}{f(x)} = L
+	\end{align*}
+Suppose $\lim_{x\to a}{\frac{f(x)}{g(x)}} = L$ and $\lim_{x \to a}{g(x)} = 0$, then $\lim_{x\to a}{f(x)}=0$. Otherwise, we can use product limit laws to create a contradiction. 
+\subsection{Definition of Limits as $x \to \pm\infty$}
+\end{multicols*}
+\end{document}
